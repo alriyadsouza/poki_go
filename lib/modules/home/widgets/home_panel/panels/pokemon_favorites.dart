@@ -1,0 +1,122 @@
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
+import 'package:lottie/lottie.dart';
+import 'package:period_cycle/modules/home/home_page_store.dart';
+import 'package:period_cycle/modules/pokemon_details/pokemon_details.dart';
+import 'package:period_cycle/modules/pokemon_details/widgets/pokemon_panel/pokemon_mobile_panel.dart';
+import 'package:period_cycle/modules/pokemon_grid/widgets/poke_item.dart';
+import 'package:period_cycle/shared/stores/pokemon_store/pokemon_store.dart';
+import 'package:period_cycle/shared/utils/app_constants.dart';
+
+class PokemonFavorites extends StatelessWidget {
+  static final PokemonStore pokemonStore = GetIt.instance<PokemonStore>();
+  final ScrollController scrollController;
+  final HomePageStore homePageStore;
+
+  const PokemonFavorites(
+      {Key? key, required this.homePageStore, required this.scrollController})
+      : super(key: key);
+
+  double get topPadding {
+    if (pokemonStore.favoritesPokemonsSummary.isNotEmpty) {
+      return kIsWeb ? 68 : 50;
+    } else {
+      return 0;
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final TextTheme textTheme = Theme.of(context).textTheme;
+
+    final size = MediaQuery.of(context).size;
+
+    final horizontalPadding = getDetailsPanelsPadding(size);
+
+    if (pokemonStore.favoritesPokemonsSummary.isEmpty) {
+      return Container(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Text(
+              "You do not have any favorited Pokemon yet",
+              style: textTheme.bodyText1,
+            ),
+            Center(
+              child: Lottie.asset(
+                AppConstants.pikachuLottie,
+                width: 400,
+              ),
+            )
+          ],
+        ),
+      );
+    }
+
+    return Padding(
+      padding: EdgeInsets.only(
+          left: horizontalPadding, right: horizontalPadding, top: 28),
+      child: Stack(
+        children: [
+          Padding(
+            padding: EdgeInsets.only(top: topPadding),
+            child: NestedScrollView(
+              headerSliverBuilder: (context, value) {
+                return [];
+              },
+              body: GridView.builder(
+                controller: scrollController,
+                gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                  maxCrossAxisExtent: 200,
+                  mainAxisSpacing: 10.0,
+                  crossAxisSpacing: 10.0,
+                  childAspectRatio: 3 / 2,
+                ),
+                itemBuilder: (context, index) {
+                  final _pokemon = pokemonStore.favoritesPokemonsSummary[index];
+                  final _index = pokemonStore.pokemonsSummary!
+                      .indexWhere((it) => it.number == _pokemon.number);
+
+                  return InkWell(
+                    onTap: () async {
+                      await pokemonStore.setPokemon(_index);
+
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (_) {
+                          return PokemonDetailsPage(
+                            isFavoritePokemon: true,
+                          );
+                        }),
+                      );
+                    },
+                    child: Ink(
+                      child: PokeItemWidget(
+                        pokemon: _pokemon,
+                        isFavorite: true,
+                      ),
+                    ),
+                  );
+                },
+                itemCount: pokemonStore.favoritesPokemonsSummary.length,
+              ),
+            ),
+          ),
+          Container(
+            height: 40,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Favorites Pokemons",
+                  style: textTheme.bodyText1,
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
