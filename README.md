@@ -17,12 +17,8 @@ Feel free to explore the repository to gain insights into the world of Pokémon.
 
 If you wish to contribute to this repository by adding more information or improving existing content, please follow the guidelines outlined in CONTRIBUTING.md.
 
-## License
-
-This project is licensed under the [INSERT LICENSE HERE] License - see the LICENSE.md file for details.
-
 ## Contact
 
-For any queries or suggestions related to Poki Go, please reach out to us at [INSERT CONTACT INFORMATION HERE].
+For any queries or suggestions related to Poki Go, please reach out to us at alriyatreeza929@gmail.com.
 
 Happy Pokémon hunting!
