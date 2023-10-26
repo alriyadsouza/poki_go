@@ -20,7 +20,6 @@ Please adhere to the Code of Conduct outlined in CODE_OF_CONDUCT.md to foster a 
 If you come across any issues or have suggestions for improvements, please open an issue on the repository's issue tracker, providing as much detail as possible.
 
 ## Contact
-
 For any questions or concerns regarding the contribution process, feel free to reach out to us at 21i03.alriya@sjec.ac.in.
 
 Thank you for your interest in contributing to Poki Go!
