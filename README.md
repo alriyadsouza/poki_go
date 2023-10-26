@@ -1,6 +1,6 @@
 # Poki Go
 
-Poki Go is a comprehensive repository that provides detailed information about every Pokémon, including their requirements and additional details.
+Poki Go is a comprehensive repository that provides detailed information about every Pokémon, including their requirements and additional details
 
 ## Features
 
