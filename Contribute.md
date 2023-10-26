@@ -21,6 +21,6 @@ If you come across any issues or have suggestions for improvements, please open 
 
 ## Contact
 
-For any questions or concerns regarding the contribution process, feel free to reach out to us at [INSERT CONTACT INFORMATION HERE].
+For any questions or concerns regarding the contribution process, feel free to reach out to us at 21i03.alriya@sjec.ac.in.
 
 Thank you for your interest in contributing to Poki Go!
