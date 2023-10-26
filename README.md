@@ -7,7 +7,7 @@ Poki Go is a comprehensive repository that provides detailed information about e
 - Detailed profiles of each Pokémon, including their types, abilities, and evolutions.
 - Comprehensive information on the various requirements for evolving and training each Pokémon.
 - Special tips and strategies for catching rare and legendary Pokémon.
-- A user-friendly interface for easy navigation and access to specific Pokémon information.
+- A user-friendly interface for easy navigation and access to specific information.
 
 ## Usage
 
