@@ -21,4 +21,4 @@ If you wish to contribute to this repository by adding more information or impro
 
 For any queries or suggestions related to Poki Go, please reach out to us at alriyatreeza929@gmail.com.
 
-Happy Pokémon hunting!
+
