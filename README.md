@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to the Period Cycle App, a Flutter-based mobile application designed to help individuals track and manage their menstrual cycles. This app provides an easy and convenient way to keep tabs on your periods, fertility, and overall reproductive health.
+Welcome to the Period Cycle App, a Flutter-based mobile application designed to help individuals track and manage their menstrual cycles. This app provides an easy and convenient way to keep tabs on your periods, fertility, and overall health.
 
 ## Features
 
