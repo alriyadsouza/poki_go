@@ -11,11 +11,11 @@ Poki Go is a comprehensive repository that provides detailed information about e
 
 ## Usage
 
-Feel free to explore the repository to gain insights into the world of Pokémon. Whether you're a seasoned trainer or a novice in the Pokémon universe, this repository is designed to provide valuable information and tips for enhancing your gameplay experience.
+Feel free to explore the repository to gain insights into the world of Pokémon. Whether you're a seasoned trainer or a novice in the Pokémon universe, this repository is designed to provide valuable information and tips for enhancing your gameplay experience
 
 ## Contribution
 
-If you wish to contribute to this repository by adding more information or improving existing content, please follow the guidelines outlined in CONTRIBUTING.md.
+If you wish to contribute to this repository by adding more information or improving existing content, please follow the guidelines outlined in CONTRIBUTING.md
 
 ## Contact
 
